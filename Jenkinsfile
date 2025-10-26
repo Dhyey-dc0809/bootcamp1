@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Checkout form git') {
             steps {
-                echo 'Hello World'
+                git branch: 'prod' , url: 'https://github.com/Dhyey-dc0809/bootcamp1.git'
             }
         }
     }
