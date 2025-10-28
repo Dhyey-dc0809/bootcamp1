@@ -26,7 +26,7 @@ pipeline {
                     -Dsonar.organization=Dhyey-dc0809 \
                     -Dsonar.projectName=mynewjavaapp \
                     -Dsonar.projectKey=mynewjavaapp \
-                    -Dsonar.java.binaries=.
+                    -Dsonar.java.binaries=.\
                     '''
 
 
