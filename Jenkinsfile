@@ -6,9 +6,14 @@ pipeline {
                 git branch: 'prod' , url: 'https://github.com/Dhyey-dc0809/bootcamp1.git'
             }
         }
-        stage('Complie with maven') {
+        stage('Validate with Maven') {
             steps {
                 sh 'mvn validate'
+            }
+        }
+        stage('Compile with Maven') {
+            steps {
+                sh 'mvn compile'
             }
         }
     }
