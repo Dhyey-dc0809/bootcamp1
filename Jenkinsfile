@@ -32,5 +32,12 @@ pipeline {
                 }
             }
         }
+        stage('sonar quality gate') {
+            steps {
+                timeout(time: 1, unit: 'MINUTES') {
+                    waitForQualityGate abortPipeline: true, credentialsId: 'sonartrial'
+                }
+            }
+        }
     }
 }
