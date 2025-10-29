@@ -32,6 +32,11 @@ pipeline {
                 }
             }
         }
+        stage('maven package') {
+            steps {
+                sh 'mvn pakage'
+            }
+        }
         stage('sonar quality gate') {
             steps {
                 timeout(time: 1, unit: 'MINUTES') {
