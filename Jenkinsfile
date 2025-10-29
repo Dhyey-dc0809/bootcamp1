@@ -24,7 +24,7 @@ pipeline {
                 withSonarQubeEnv('sonarserver') {
                     sh '''
                     ${SCANNER_HOME}/bin/sonar-scanner \
-                    -Dsonar.organization=Dhyey-dc0809 \
+                    -Dsonar.organization=dhyey-dc0809 \
                     -Dsonar.projectName=mynewjavaapp \
                     -Dsonar.projectKey=mynewjavaapp \
                     -Dsonar.java.binaries=.\
